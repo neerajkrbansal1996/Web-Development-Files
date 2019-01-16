@@ -1,0 +1,82 @@
+*{
+	font-family: arial;
+}
+
+.wrap {
+	width: 350px;
+	background: #00adee;
+	margin: 50px auto;
+	border-radius: 5px;
+}
+
+form {
+	padding: 10px;
+}
+
+.form-header {
+	width: 100%;
+	text-align: center;
+	background-color: #454955;
+	padding: 20px 10px 10px 10px;
+	border-radius: 5px 5px 0px 0px;
+}
+
+.form-header h4{
+	color : #6A6E7A;
+}
+
+.form-body{
+	padding: 10px;
+	background-color: #22252A;
+	border-radius: 0px 0px 5px 5px;
+}
+
+.form-body p{
+	color : white;
+}
+
+label {
+	color : #606368;
+	font-size: 16px;
+}
+
+input[type=text], input[type=email],input[type=password],input[type=checkbox] {
+	background-color: #454955;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+   color:    red;
+}
+
+button[type=submit] {
+	color : #eee;
+	background-color: #22A6CF;
+	text-transform: uppercase;
+}
+
+hr {
+	border-top: dotted 1px
+}
+
+.btn-signin {
+	width: 100%;
+	background-color: #545864;
+	color: white;
+	text-transform: uppercase;
+}
+
+input::-webkit-input-placeholder {
+color: #6A6E7A !important;
+}
+ 
+input:-moz-placeholder { /* Firefox 18- */
+color: #6A6E7A !important;  
+}
+ 
+input::-moz-placeholder {  /* Firefox 19+ */
+color: #6A6E7A !important;  
+}
+ 
+input:-ms-input-placeholder {  
+color: #6A6E7A !important;  
+}
