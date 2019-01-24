@@ -2,31 +2,46 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: sans-serif;
 }
 
 .container {
-  padding: 0px 48px;
+  padding: 0 108px;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 0;
+  }
 }
 
 /** Navigation */
-nav {
-    background-color: #2c3e50;
-    padding: 16px 0px;
+ul.topnav{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #2C3E50;
 }
 
-a#nav-header {
-  text-transform: uppercase;
-  font-size: 24px;
+ul.topnav .left{
+  float: left;
 }
 
-a#nav-header:hover {
-  color: white;
-}
-
-a.right{
+ul.topnav .right{
   float: right;
-  padding-left: 24px;
-  padding-top: 3px;
+}
+
+ul.topnav li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.nav-header{
+  font-size: 24px;
 }
 
 a {
@@ -34,33 +49,61 @@ a {
   text-decoration: none;
   color: white;
   font-weight: bold;
+  line-height: 24px;
 }
 
 a:hover {
   text-decoration: none
 }
 
+@media screen and (max-width: 600px) {
+  ul.topnav li.left,
+  ul.topnav li.right {
+    float: none;
+  }
+
+  ul.topnav li a{
+      padding: 14px 0;
+  }
+}
+
 /** Header */
 
 header {
   background-color: #18bc9c;
-  padding: 48px;
-  width: 100%;
+  padding: 48px 0;
   text-align: center;
 }
 
 header h1{
-  font-size: 72px;
+  font-size: 3em;
   margin-top: 24px;
   margin-bottom: 24px;
   color: #fff;
 }
 
 header p{
-  font-size: 24px;
+  font-size: 1.5em;
   color: #fff;
 }
 
+header img{
+  width: 22vw;
+  min-width: 200px;
+}
+
+/*@media screen and (max-width: 600px) {
+  header h1{
+    font-size: 36px;
+  }
+
+  header p{
+    font-size: 16px;
+  }
+}*/
+
+
+/** Star Line CSS */
 hr.star-light,
 hr.star-dark {
   max-width: 240px;
@@ -84,9 +127,17 @@ hr.star-dark {
 
 /** Portfolio */
 .portfolio {
-  padding-top: 48px;
+  padding-top: 24px;
   text-align: center;
 
+}
+
+.portfolio h2{
+  font-size: 2.5em;
+}
+
+.portfolio img{
+  width: 100%;
 }
 
 .image-gallery {
@@ -94,22 +145,24 @@ hr.star-dark {
   width: 100%;
   flex-wrap: wrap;
   padding: 0 4px;
+  justify-content: center;
 }
 
 .image {
-  flex-basis: 30%;
-  max-width: 30%;
-  margin: 16px;
+  flex-basis: 31%;
+  min-width: 300px;
+  margin: 4px;
 }
 
 /** About Section */
 .about-section {
   background-color: #18bc9c;
   text-align: center;
-  padding: 48px 0px;
+  padding: 24px 0px;
 }
 
 .about-section h2{
+  font-size: 2.5em;
   text-transform: uppercase;
 }
 
@@ -118,15 +171,21 @@ hr.star-dark {
   color: white;
 }
 
+.about-section p{
+  font-size: 1.4em;
+}
+
 .first-column {
   width: 50%;
-  /*float: left;*/
+  padding: 24px;
+  float: left;
 }
 
 
 .second-column {
   width: 50%;
-  /*float: left;*/
+  padding: 24px;
+  float: left;
 }
 
 .clearfix::after {
@@ -137,13 +196,23 @@ hr.star-dark {
 
 .download-btn {
   margin-top: 48px;
-  border: 2px solid white;
+  border: 3px solid white;
   background-color: transparent;
   padding: 16px;
   border-radius: 4px;
+  font-size: 24px;
   color: white;
 }
 
+@media screen and (max-width: 600px) {
+    .first-column,
+    .second-column{
+      float: none;
+      padding: 16px;
+      text-align: center;
+      margin: auto;
+    }
+}
 
 /** Contact Section */
 
@@ -153,6 +222,7 @@ hr.star-dark {
 }
 
 .contact-section h2{
+  font-size: 2.5em;
   text-transform: uppercase;
 }
 
@@ -161,7 +231,7 @@ hr.star-dark {
   width: 70%;
   border: none;
   border-bottom: 0.5px solid lightgray;
-  padding: 16px;
+  padding: 24px;
 }
 
 input[type="submit"]{
