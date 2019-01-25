@@ -32,13 +32,15 @@ ul.topnav .right{
   float: right;
 }
 
-ul.topnav li a{
+ul.topnav li a,
+ul.topnav a{
   display: block;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
+
 
 .nav-header{
   font-size: 24px;
@@ -56,7 +58,34 @@ a:hover {
   text-decoration: none
 }
 
+.topnav .icon {
+  display: none;
+}
+
+
 @media screen and (max-width: 600px) {
+  .topnavContainer li:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive li {
+    float: none;
+    display: block;
+  }
+}
+
+/*@media screen and (max-width: 600px) {
   ul.topnav li.left,
   ul.topnav li.right {
     float: none;
@@ -65,7 +94,7 @@ a:hover {
   ul.topnav li a{
       padding: 14px 0;
   }
-}
+}*/
 
 /** Header */
 
@@ -76,7 +105,7 @@ header {
 }
 
 header h1{
-  font-size: 3em;
+  font-size: 2.5em;
   margin-top: 24px;
   margin-bottom: 24px;
   color: #fff;
@@ -145,6 +174,7 @@ hr.star-dark {
   width: 100%;
   flex-wrap: wrap;
   padding: 0 4px;
+  margin-bottom: 24px;
   justify-content: center;
 }
 
@@ -173,6 +203,7 @@ hr.star-dark {
 
 .about-section p{
   font-size: 1.4em;
+  text-align: justify;
 }
 
 .first-column {
@@ -250,6 +281,13 @@ footer {
   background-color: #2c3e50;
 }
 
+footer h4{
+  font-size: 1.6em
+}
+footer p{
+  font-size: 0.8em
+}
+
 footer h4,
 footer p{
   color: white;
@@ -257,9 +295,20 @@ footer p{
 
 .footer-content {
   display: flex;
-  flex: row wrap;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.first-column, .second-column, .third-column{
+.footer-column{
+  flex-basis: 33%;
+  min-width: 240px;
+  padding: 16px;
+  text-align: center;
 }
+
+.footer-column h4{
+  margin-bottom: 16px;
+}
+
 
